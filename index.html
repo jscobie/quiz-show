@@ -9,7 +9,30 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="./highscores.html">View Highscores</a>
+            <p>Time: <span id = "countdown">75</span></p> 
+        </nav>
+    </header>
+
+    <div class = "wrapper">
+        <div id="start-screen">
+            <h1>Coding Quiz Challenge</h1>
+            <p id="start-desc">Try to answer the following code-related questions within the Time
+                limit. Keep in mind that incorrect answers will penalize your score/time
+                by ten seconds!
+            </p>
+            <button id="start-button">Start Quiz</button>
+        </div>
+        <div id="questions" class="hide"></div>
+        <div id="answers" class="hide"></div>
+        <div id="end-screen"></div>
+        <div id="feedback" class="hide"></div>
+
+
+
+    </div>
 
 
     <script src="./assets/script.js"></script>
