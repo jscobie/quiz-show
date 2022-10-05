@@ -11,16 +11,20 @@ const fiveChoice = ["JavaScript", "terminal/bash", "for loops", "console.log"];
 const correctAnswers = ["alerts", "parenthesis", "all of the above", "quotes", "console.log"];
 
 var startButton = document.querySelector("#start-button");
+var startScreen = document.querySelector("#start-screen")
 var timer = document.querySelector("#countdown");
+var questionText = document.querySelector("#questions")
+var answerButtons = document.querySelector("#answers")
 
 var secondsLeft = timer.textContent;
 
 startButton.addEventListener("click", function(event) {
-    console.log("here we go");
     startTimer();
-    
+    startScreen.setAttribute("hidden", "true");
+    questionText.removeAttribute("hidden", "true");
+    answerButtons.removeAttribute("hidden", "true");
+    answerButtons.setAttribute("display", "table-column")
 });
-
 
 function startTimer() {
     // Sets timer
@@ -28,8 +32,7 @@ function startTimer() {
         secondsLeft--;
         timer.textContent = secondsLeft;
         if (secondsLeft === 0) {
-            clearInterval(timerS)
-            alert("game over");
+            clearInterval(timerS);
         }
-        }, 1000);
+        }, 100);
       }
