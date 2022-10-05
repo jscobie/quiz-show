@@ -15,33 +15,30 @@
             <p>Time: <span id = "countdown">75</span></p> 
         </nav>
     </header>
-
-    <div class = "wrapper">
-        <div id="start-screen">
-            <h1>Coding Quiz Challenge</h1>
-            <p id="start-desc">Try to answer the following code-related questions within the Time
-                limit. Keep in mind that incorrect answers will penalize your score/time
-                by ten seconds!
-            </p>
-            <button id="start-button">Start Quiz</button>
-        </div>
-        
+    <div id="start-screen">
+        <h1>Coding Quiz Challenge</h1>
+        <p id="start-desc">Try to answer the following code-related questions within the Time
+            limit. Keep in mind that incorrect answers will penalize your score/time
+            by ten seconds!
+        </p>
+        <button id="start-button">Start Quiz</button>
+    </div>
+    <section class="quiz">
         <div id="questions" hidden="false">
             <h2 id="qtext">Question goes here, just longer text to see how this goes</h2>
         </div>
         <div id="answers" hidden="false">
-                <button id="choice1">Choice 1</button>
-                <button id="choice2">Choice 2</button>
-                <button id="choice3">Choice 3</button>
-                <button id="choice4">Choice 4</button>
+            <ul>
+                <li><button id="choice1">Choice 1</button></li>
+                <li><button id="choice2">Choice 2</button></li>
+                <li><button id="choice3">Choice 3</button></li> 
+                <li><button id="choice4">Choice 4</button></li>
+            </ul>
         </div>
         <div id="feedback" hidden="false"></div>
-        <div id="end-screen"></div>
+    </section>     
+        <div id="end-screen" hidden="false"></div>
 
-
-
-
-    </div>
 
 
     <script src="./assets/script.js"></script>

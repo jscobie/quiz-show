@@ -2,7 +2,8 @@ nav {
     display: flex;
     justify-content: space-between;
     padding-top: 2%;
-    margin: 5% 5%;
+    margin: 2% 5%;
+    font-weight: bolder;
 }
 
 a {
@@ -13,12 +14,20 @@ h1 {
     font-size: 200%;
 }
 
-.wrapper {
-    display: flex;
+.quiz {
+    /* display: flex; */
     justify-content: center;
+    align-items: center;
     max-width: 400px;
     margin: auto;
     padding: 20px;
+}
+
+#start-screen {
+    max-width: 300px;
+    justify-content: center;
+    position: relative;
+    left: 40%;
 }
 
 #start-desc {
@@ -27,10 +36,10 @@ h1 {
 
 button {
     background-color: lightskyblue;
-    padding: 7.5px;
+    padding: 2px;
     border-color: blue;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     left: 50px;
 }
 
@@ -39,6 +48,3 @@ button:hover {
     font-style: italic;
 }
 
-#answers {
-
-}
