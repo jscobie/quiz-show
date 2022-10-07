@@ -14,11 +14,15 @@ h1 {
     font-size: 200%;
 }
 
+#questions {
+    font-size: 120%;
+    font-weight: bold;
+}
+
 .quiz {
-    /* display: flex; */
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     padding: 20px;
 }
