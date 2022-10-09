@@ -17,7 +17,7 @@
     </header>
     <div id="start-screen">
         <h1>Coding Quiz Challenge</h1>
-        <p id="start-desc">Try to answer the following code-related questions within the Time
+        <p id="start-desc">Try to answer the following code-related questions within the time
             limit. Keep in mind that incorrect answers will penalize your score/time
             by ten seconds!
         </p>
@@ -35,9 +35,20 @@
                 <li><button id="choice4">Choice 4</button></li>
             </ul>
         </div>
-        <div id="feedback" hidden="false"></div>
+        <div id="feedback" hidden="false">Incorrect or Correct</div>
     </section>     
-        <div id="end-screen" hidden="false"></div>
+        <div id="end-screen" hidden="false">
+            <h3>Complete!</h3>
+            <p>Your final score is <span id = "score">75</span>.</p>
+            <form method="POST">
+                <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
+                  <button id="sign-up">Sign Up</button>
+                </div>
+            </form>
+
+        </div>
 
 
 
