@@ -35,22 +35,17 @@
                 <li><button id="choice4">Choice 4</button></li>
             </ul>
         </div>
-        <div id="feedback" hidden="false">Incorrect or Correct</div>
+        <div id="feedback" hidden="false"></div>
     </section>     
         <div id="end-screen" hidden="false">
-            <h3>Complete!</h3>
-            <p>Your final score is <span id = "score">75</span>.</p>
-            <form method="POST">
-                <div class="input-group">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
-                  <button id="sign-up">Sign Up</button>
-                </div>
-            </form>
-
+            <h3>Quiz Complete!</h3>
+            <p>Congratulations, your final score is <span id = "score"></span>.</p>
+            <div id="submission">
+                <label for="submit-initials">Enter your initials to save High Scores:</label>
+                <input type="text" name="submit-initials" id="initials">
+                <button id="submit-button" type="submit">Submit</button>
+            </div>
         </div>
-
-
 
     <script src="./assets/script.js"></script>
 </body>
