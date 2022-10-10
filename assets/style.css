@@ -92,3 +92,32 @@ button:hover {
     font-style: italic;
 }
 
+#main {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+#main h2 {
+    font-size: 175%;
+    margin: 15px;
+}
+
+#scores-tracker {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#headings {
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px;
+}
+
+#btn-clear {
+    margin-top: 25px;
+}

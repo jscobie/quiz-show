@@ -40,6 +40,8 @@ var button4 = document.querySelector("#choice4");
 var result = document.querySelector("#feedback");
 var resultScreen = document.querySelector("#end-screen");
 var playerScore = document.querySelector("#score");
+var playerInitials = document.querySelector("#initials");
+var submitScore = document.querySelector("#submit-button");
 
 // variables for timing
 var questionIndex = 0;
@@ -106,6 +108,7 @@ function answer() {
     }
 }
 
+// when this is called the quiz ends
 function endGame() {
     clearInterval(timerS);
     questionText.setAttribute("hidden", "true");
@@ -115,12 +118,34 @@ function endGame() {
     playerScore.textContent = secondsLeft;
 }
 
-// button to start playing the game
+function saveScore() {
+    // get value of input box
+    var initials = playerInitials.value.trim();
+  
+    // make sure value wasn't empty
+    if (initials !== "") {
+      var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+      var addScore = {
+        score: secondsLeft,
+        initials: initials
+      };
+  
+      highscores.push(addScore);
+      window.localStorage.setItem("scoreTracker", JSON.stringify(highscores));
+  
+    //   window.location.href = "highScore.html";
+    }
+  }
+
+// button listener to start playing the game
 startButton.addEventListener("click", playGame);
 
 // button listeners for the answer buttons
-button1.addEventListener("click", answer)
-button2.addEventListener("click", answer)
-button3.addEventListener("click", answer)
-button4.addEventListener("click", answer)
+button1.addEventListener("click", answer);
+button2.addEventListener("click", answer);
+button3.addEventListener("click", answer);
+button4.addEventListener("click", answer);
+
+// button listener for the submit button to add new score
+submitScore.addEventListener("click", saveScore);
     
