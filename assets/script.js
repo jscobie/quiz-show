@@ -134,7 +134,7 @@ function saveScore() {
       highscores.push(addScore);
       localStorage.setItem("scoreTracker", JSON.stringify(highscores));
   
-    window.location.href = "./highScores.html";
+    window.location.href = "highscores.html";
     }
   }
 
