@@ -6,9 +6,9 @@ const questions = [
         answer: "alerts"
     },
     {
-        question: "The condition in an if / else statement is enclosed within _______.",
-        choices: ["quotes", "curly brakcets", "parenthesis", "square brackets"],
-        answer: "parenthesis"
+        question: "The Document Object Model (DOM) is a hierarchy that most closely resembles what object?",
+        choices: ["spiderweb", "tree", "tower", "pyramid"],
+        answer: "tree"
     },
     {
         question: "Arrays in JavaScript can be used to store _______.",
@@ -43,7 +43,7 @@ var playerScore = document.querySelector("#score");
 var playerInitials = document.querySelector("#initials");
 var submitScore = document.querySelector("#submit-button");
 
-// variables for timing
+// variables for timing and question number
 var questionIndex = 0;
 var secondsLeft = timer.textContent;
 
@@ -61,6 +61,7 @@ function startTimer() {
     timerS = setInterval(function() {
         secondsLeft--;
         timer.textContent = secondsLeft;
+        // check time running out, if true run the end game function
         if (secondsLeft === 0) {
             clearInterval(timerS);
             endGame();
@@ -79,6 +80,7 @@ function pullQuestion() {
     button4.textContent = questions[questionIndex].choices[3];
 }
 
+// on click of the answer button check if it's right
 function answer() {
     result.removeAttribute("hidden", "true");
     if (this.textContent !== questions[questionIndex].answer) {
@@ -98,7 +100,7 @@ function answer() {
         result.setAttribute("hidden", "true");
     }, 1500);
 
-    // increase index to go to next question
+    // increase index to go to next question/answers
     questionIndex++;
 
     // if we are done with questions end, otherwise get another question set
@@ -109,7 +111,7 @@ function answer() {
     }
 }
 
-// when this is called the quiz ends
+// when this is called the quiz ends, and set to show the result screen id and set score/time
 function endGame() {
     clearInterval(timerS);
     questionText.setAttribute("hidden", "true");
@@ -119,8 +121,8 @@ function endGame() {
     playerScore.textContent = secondsLeft;
 }
 
+// handles the saving of the initials and score to the local store for the high scores page
 function saveScore() {
-    // get value of input box
     var initials = playerInitials.value.trim();
   
     // make sure value wasn't empty

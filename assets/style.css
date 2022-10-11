@@ -6,11 +6,13 @@
   }
 
 body {
+    /* set the gradient background and font colors */
     background-image: linear-gradient(to top, var(--lightbg), var(--darkbg));
     color: var(--textcolors);
 }
 
 nav {
+    /* setting the nav style which is the link to/from Quiz/Scores and Timer */
     display: flex;
     justify-content: space-between;
     padding-top: 2%;
@@ -19,19 +21,23 @@ nav {
 }
 
 a {
+    /* sets color of links */
     color: var(--textcolors);
 }
 
 h1 {
+    /* font size for h1 elements (Start Header) */
     font-size: 250%;
 }
 
 #questions {
+    /* Font size and style of the questions in the quiz */
     font-size: 120%;
     font-weight: bold;
 }
 
 .quiz {
+    /* positioning and maring/pad for the quiz (question and answer section) */
     justify-content: center;
     align-items: center;
     max-width: 500px;
@@ -40,6 +46,7 @@ h1 {
 }
 
 #start-screen {
+    /* position of the start screen objects */
     text-align: center;
     max-width: 300px;
     justify-content: center;
@@ -48,6 +55,7 @@ h1 {
 }
 
 #end-screen {
+    /* positioning of the results/end screen */
     text-align: center;
     max-width: 500px;
     justify-content: center;
@@ -56,28 +64,34 @@ h1 {
 }
 
 #submission {
+    /* sizing for the submission section */
     max-width: 600px;
 }
 
 #initials {
+    /* adjusting score initials box size */
     max-width: 50px;
 }
 
 #end-screen p {
+    /* adding margin to the p text in the end screen to space things */
     margin: 5%;
 }
 
 h3 {
+    /*  setting the size and style and padding for the h3 element (title in end/result screen */
     font-size: 200%;
     font-weight: bold;
     padding: 5%;
 }
 
 #start-desc {
+    /* padding to space this section out, the tart screen */
     padding-top: 5%;
 }
 
 button {
+    /* button formatting */
     background-color: lightskyblue;
     font-weight: 600;
     padding: 2px;
@@ -88,11 +102,13 @@ button {
 }
 
 button:hover {
+    /* on hover of the buttons, make style and pointer changes */
     cursor: pointer;
     font-style: italic;
 }
 
 #main {
+    /* general positioning for the highscores page */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -102,22 +118,26 @@ button:hover {
 }
 
 #main h2 {
+    /* header size and margin for highscores page */
     font-size: 175%;
     margin: 15px;
 }
 
 #scores-tracker {
+    /* set the positioning and alignment of the initials/score added li elements */
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 #headings {
+    /* specific styling for the li's that act as the headers for the initials and scores of players submissions */
     font-weight: bold;
     font-style: italic;
     padding: 5px;
 }
 
 #btn-clear {
+    /* specific spacing to the reset score button to move it down */
     margin-top: 25px;
 }
