@@ -5,13 +5,13 @@ var resetButton = document.getElementById("btn-clear");
 function populateScores() {
     var scores = JSON.parse(window.localStorage.getItem("scoreTracker")) || [];
 
-    scores.sort(function(a, b) {
-        return b.score - a.score;
-      });
+    // scores.sort(function(a, b) {
+    //     return b.score - a.score;
+    //   });
 
-    scores.forEach(function(score) {
+    scores.forEach(function(scores) {
         var liEl = document.createElement("li");
-        liEl.textContent = score.initials + " | " + score.score;
+        liEl.textContent = scores.initials + " | " + scores.score;
         var olEl = document.getElementById("scores-tracker");
         olEl.appendChild(liEl);
     });

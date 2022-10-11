@@ -124,16 +124,17 @@ function saveScore() {
   
     // make sure value wasn't empty
     if (initials !== "") {
-      var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+      var highscores = JSON.parse(window.localStorage.getItem("scoreTracker")) || [];
+      
       var addScore = {
         score: secondsLeft,
         initials: initials
       };
   
       highscores.push(addScore);
-      window.localStorage.setItem("scoreTracker", JSON.stringify(highscores));
+      localStorage.setItem("scoreTracker", JSON.stringify(highscores));
   
-    //   window.location.href = "highScore.html";
+    window.location.href = "./highScores.html";
     }
   }
 
