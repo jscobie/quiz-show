@@ -64,7 +64,6 @@ function startTimer() {
         // check time running out, if true run the end game function
         if (secondsLeft === 0) {
             clearInterval(timerS);
-            endGame();
         }
     }, 1000);
 };
@@ -88,9 +87,9 @@ function answer() {
         result.textContent = "Wrong!!! Time lost.";
         if (secondsLeft < 0) {
             secondsLeft = 0;
+            endGame();
         }
         timer.textContent = secondsLeft;
-        endGame();
     } else {
         result.textContent = "Correct, Good Job!"
     }
