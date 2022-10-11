@@ -88,6 +88,7 @@ function answer() {
             secondsLeft = 0;
         }
         timer.textContent = secondsLeft;
+        endGame();
     } else {
         result.textContent = "Correct, Good Job!"
     }
