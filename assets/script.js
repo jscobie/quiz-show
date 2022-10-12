@@ -87,6 +87,7 @@ function answer() {
         result.textContent = "Wrong!!! Time lost.";
         if (secondsLeft < 0) {
             secondsLeft = 0;
+            timer.textContent = secondsLeft;
             endGame();
         }
         timer.textContent = secondsLeft;
